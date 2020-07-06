@@ -15,11 +15,11 @@
           {{field.label}}
           {{field (class_="form-control")}}
 
-          {% for err in field.errors %}
           <small class="form-text text-danger">
+            {% for err in field.errors %}
             {{err}}
+            {% endfor %}
           </small>
-          {% endfor %}
         </div>
 
         {% endfor %}

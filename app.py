@@ -29,7 +29,7 @@ def add_pet():
     if form.validate_on_submit():
         name = form.name.data
         species = form.species.data
-        photo_url = form.photo_url.data
+        photo_url = form.photo_url.data if form.photo_url.data else None
         age = form.age.data
         notes = form.notes.data
         # stores form data as variables and passed down to db

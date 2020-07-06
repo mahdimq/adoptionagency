@@ -13,7 +13,7 @@ class PetForm(FlaskForm):
                           ("cat", "Cat"), ("dog", "Dog"), ("porcupine", "Porcupine")])
     photo_url = TextField("Photo URL", validators=[Optional(), URL()])
     age = IntegerField("Age", validators=[NumberRange(
-        min=0, max=30, message="Age has to be between 0 and 30"), Optional()])
+        min=0, max=30, message="- Age has to be between 0 and 30"), Optional()])
     notes = TextAreaField("Notes", validators=[Optional()])
 
 
