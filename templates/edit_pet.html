@@ -20,18 +20,21 @@
             {{form.photo_url.label}}
             {{form.photo_url (class_="form-control")}}
 
-            {% for field in form if field.widget.input_type != "hidden" %}
+            <!-- {% for field in form if field.widget.input_type != "hidden" %} -->
             <small class="form-text text-danger">
-              {% for err in field.errors %}
-              {{err}}
-              {% endfor %}
+              <!-- {% for err in field.errors %} -->
+              {{form.photo_url.errors[0]}}
+              <!-- {% endfor %} -->
             </small>
-            {% endfor %}
+            <!-- {% endfor %} -->
           </div>
 
           <div class="form-group">
             {{form.notes.label}}
             {{form.notes (class_="form-control ")}}
+            <small class="form-text text-danger">
+              {{form.notes.errors[0]}}
+            </small>
           </div>
 
           <div class="custom-control custom-checkbox form-group">
